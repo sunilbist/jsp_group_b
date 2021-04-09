@@ -9,6 +9,11 @@
 <body>
 	<h1>Signup Page</h1>
 	<hr />
+	<%
+		if(request.getParameter("err")!=null){
+			out.print("<h2 style='background-color:red; color:white; width:400px;'>Password and Confirm Password not matched</h2>");
+		}
+	%>
 	<form method="post" action="signup-process.jsp">
 		<table>
 			<tr>
@@ -34,11 +39,11 @@
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td colspan="2"><input type="text" name="txt_password" /></td>
+				<td colspan="2"><input type="password" name="txt_password" /></td>
 			</tr>
 			<tr>
 				<td>Confirm-Password</td>
-				<td colspan="2"><input type="text" name="txt_confirm_password" /></td>
+				<td colspan="2"><input type="password" name="txt_confirm_password" /></td>
 			</tr>
 			<tr>
 				<td></td>
