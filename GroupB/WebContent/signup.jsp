@@ -18,32 +18,32 @@
 		<table>
 			<tr>
 				<td>First Name</td>
-				<td colspan="2"><input type="text" name="txt_first_name" /></td>
+				<td colspan="2"><input required type="text" name="txt_first_name" /></td>
 			</tr>
 			<tr>
 				<td>Last Name</td>
-				<td colspan="2"><input type="text" name="txt_last_name" /></td>
+				<td colspan="2"><input required type="text" name="txt_last_name" /></td>
 			</tr>
 			<tr>
 				<td>DOB</td>
-				<td colspan="2"><input type="date" name="txt_dob" /></td>
+				<td colspan="2"><input type="date" required name="txt_dob" /></td>
 			</tr>
 			<tr>
 				<td>Gender</td>
-				<td colspan="2"><input type="radio" name="txt_gender" value="M" />Male
-					<input value="F" type="radio" name="txt_gender" /> Female</td>
+				<td colspan="2"><input type="radio" name="txt_gender" required value="M" />Male
+					<input value="F" type="radio" name="txt_gender" required /> Female</td>
 			</tr>
 			<tr>
 				<td>Email Address</td>
-				<td colspan="2"><input type="email" name="txt_email_address" /></td>
+				<td colspan="2"><input type="email" required name="txt_email_address" /></td>
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td colspan="2"><input type="password" name="txt_password" /></td>
+				<td colspan="2"><input type="password" required name="txt_password" /></td>
 			</tr>
 			<tr>
 				<td>Confirm-Password</td>
-				<td colspan="2"><input type="password" name="txt_confirm_password" /></td>
+				<td colspan="2"><input type="password" required name="txt_confirm_password" /></td>
 			</tr>
 			<tr>
 				<td></td>

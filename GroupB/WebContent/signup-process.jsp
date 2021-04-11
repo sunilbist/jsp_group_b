@@ -20,7 +20,7 @@ try {
 	out.println("Driver Loaded Successfully....");
 
 	//establish connection
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/groupa", "root", "");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/groupb", "root", "");
 	out.println("Database connected successfully....");
 
 	//Prepare sql query
