@@ -1,4 +1,5 @@
 
+<%@page import="db.MySqlConnector"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
@@ -15,14 +16,7 @@ if (!pass.equals(confirm)) {
 }
 
 try {
-	//step 1 load database driver
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	out.println("Driver Loaded Successfully....");
-
-	//establish connection
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/groupb", "root", "");
-	out.println("Database connected successfully....");
-
+	Connection conn = MySqlConnector.connect();
 	//Prepare sql query
 	String sql = "INSERT INTO tbl_users(firstname,lastname,dob,gender,email,password) VALUES(?,?,?,?,?,?)";
 	PreparedStatement stmt = conn.prepareStatement(sql);

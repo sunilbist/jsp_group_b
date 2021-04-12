@@ -1,3 +1,9 @@
+
+<%
+	if (session.getAttribute("username") == null) {
+	response.sendRedirect("login.jsp");
+}
+%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,8 +13,10 @@
 <title>Home Page</title>
 </head>
 <body>
-	<h1>Welcome Home</h1>
-
-	<a href="login.jsp">Logout</a>
+	<h1>
+		Welcome Home
+		<%=session.getAttribute("fullName")%></h1>
+	<a href="newblog.jsp">Create New Blog</a>
+	<a href="logout.jsp">Logout</a>
 </body>
 </html>
